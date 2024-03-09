@@ -3,13 +3,10 @@
  * for the name.
 */
 
-
 #ifndef MESSAGE_H
 #define MESSAGE_H
 
 #include <cstring>
-
-using namespace std;
 
 class Message {
   private:
@@ -18,10 +15,10 @@ class Message {
   
   public:
     ~Message();
+    Message(int ID,char *name);
     Message & operator=(const Message &otherMessage);
     Message(const Message &otherMessage);
     const char *getRecipient () const;
-    Message(int, char *);
     const int getID();
 };
 
