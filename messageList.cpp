@@ -58,4 +58,38 @@ void messageList::listRecipient(const char *name) const {
   }
 }
 
-void messageList::deleteMessage(int ID) { bool deleted; }
+void messageList::deleteMessage(int ID) {
+  bool deleted = false;
+  Node *curr = head;
+
+  if (head == nullptr) {
+    deleted = true;
+    tail = nullptr;
+  } else if (head->message->getID() == ID) {
+    curr = head;
+    head = head->next;
+
+    delete curr->message;
+    delete curr;
+    deleted = true;
+  }
+
+  while (!deleted) {
+    Node *prev = nullptr;
+
+    if (curr->message->getID() == ID) {
+      prev->next = curr->next;
+
+      if (curr == tail) {
+        tail = prev;
+      }
+
+      delete curr->message;
+      delete curr;
+      deleted = true;
+    } else {
+      prev = curr;
+      curr = curr->next;
+    }
+  }
+}
