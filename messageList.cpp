@@ -32,8 +32,7 @@ void messageList::addMessage(int ID, char *name) {
 void messageList::listAll() const {
   Node *curr = head;
 
-  cout << setw(10) << setfill('*') << " All Messages ";
-  cout << setw(10) << setfill('*');
+  cout  << "** All Messages **" << endl;
 
   while (curr != nullptr) {
     cout << "Message " << curr->message->getID() << " ";
@@ -42,7 +41,7 @@ void messageList::listAll() const {
     curr = curr->next;
   }
 
-  cout << setw(30) << setfill('*') << endl;
+  cout << "**********************" << endl;
 }
 
 void messageList::listRecipient(const char *name) const {
@@ -51,7 +50,7 @@ void messageList::listRecipient(const char *name) const {
   while (curr != nullptr) {
     if (strcmp(name, curr->message->getRecipient()) == 0) {
       cout << "Messages for " << curr->message->getRecipient() << ":" << endl;
-      cout << " " << curr->message->getID();
+      cout << "  " << curr->message->getID() << endl;
     }
 
     curr = curr->next;
