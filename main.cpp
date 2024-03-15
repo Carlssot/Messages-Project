@@ -5,7 +5,6 @@
 #include "messageList.h"
 #include <cstring>
 #include <fstream>
-#include <string>
 
 using namespace std;
 const int STRMAX = 100;
@@ -31,30 +30,43 @@ int main(int argc, char *argv[]) {
   int ID;
 
   file >> action;
+  file.ignore();
+  // file.getline(action, STRMAX, ' ');
+  // cout << action << endl;
 
   while (!file.eof()) {
     if (strcmp("All", action) == 0) {
       list.listAll();
 
+      // cout << action << " "  << ID << endl;
     } else if (strcmp("Delete", action) == 0) {
       file >> ID;
+      file.ignore();
+      
+      //test input:
+      // cout << action << " "  << ID << endl;
 
-      // cout << action << " " << name << " " << ID << endl;
-      // list.deleteMessage(ID);
+      list.deleteMessage(ID);
     } else if (strcmp("List", action) == 0) {
       file.getline(name, STRMAX);
+      // file.ignore(5,'\n');
 
       // cout << action << " " << name << " " << ID << endl;
       list.listRecipient(name);
     } else if (strcmp("Receive", action) == 0) {
       file >> ID;
       file.getline(name, STRMAX);
+      // file.ignore(5,'\n');
+
+      cout << action << " " << name << " " << ID << endl;
       list.addMessage(ID, name);
 
       // cout << action << " " << name << " " << ID << endl;
     }
 
     file >> action;
+    // file.getline(action, STRMAX,' ');
+    // cout << action << "2" << endl;
   }
 
   file.close();

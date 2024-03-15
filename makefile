@@ -12,4 +12,4 @@ $(TARGET): $(SRCS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(TARGET) myoutput.txt

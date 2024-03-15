@@ -20,7 +20,7 @@ void messageList::addMessage(int ID, char *name) {
   newNode->next = nullptr;
   newNode->message = new Message(ID, name);
 
-  if (!head) {
+  if (head == nullptr) {
     head = newNode;
     tail = newNode;
   } else {
@@ -32,10 +32,10 @@ void messageList::addMessage(int ID, char *name) {
 void messageList::listAll() const {
   Node *curr = head;
 
-  cout  << "** All Messages **" << endl;
+  cout << "** All Messages **" << endl;
 
   while (curr != nullptr) {
-    cout << "Message " << curr->message->getID() << " ";
+    cout << "Message " << curr->message->getID();
     cout << curr->message->getRecipient() << endl;
 
     curr = curr->next;
@@ -49,7 +49,7 @@ void messageList::listRecipient(const char *name) const {
 
   while (curr != nullptr) {
     if (strcmp(name, curr->message->getRecipient()) == 0) {
-      cout << "Messages for " << curr->message->getRecipient() << ":" << endl;
+      cout << "Messages for" << curr->message->getRecipient() << ":" << endl;
       cout << "  " << curr->message->getID() << endl;
     }
 
@@ -58,37 +58,89 @@ void messageList::listRecipient(const char *name) const {
 }
 
 void messageList::deleteMessage(int ID) {
-  bool deleted = false;
   Node *curr = head;
+  Node *prev = nullptr;
+  bool deleted = false;
 
   if (head == nullptr) {
     deleted = true;
-    tail = nullptr;
-  } else if (head->message->getID() == ID) {
-    curr = head;
-    head = head->next;
+  } else {
+    if (head->message->getID() == ID) {
+      curr = head;
+      head = head->next;
+      delete curr->message;
+      delete curr;
+      deleted = true;
+
+        cout << ID << endl;
+    } else {
+      while (curr != nullptr && curr->message->getID() != ID) {
+        prev = curr;
+        curr = curr->next;
+      }
+
+      if (prev != nullptr && prev->message->getID() == ID) {
+        prev->next = curr->next;
+        delete curr->message;
+        delete curr;
+
+        cout << ID << endl;
+
+        deleted = true;
+      }
+    }
+  }
+
+  // if (deleted == false) {
+  // cout << "ID not found in list." << endl;
+  // }
+}
+
+/*bool deleted = false;
+Node *curr = head;
+
+if (head == nullptr) {
+  deleted = true;
+  tail = nullptr;
+} else if (head->message->getID() == ID) {
+  curr = head;
+  head = head->next;
+
+  delete curr->message;
+  delete curr;
+  deleted = true;
+}
+
+while (!deleted) {
+  Node *prev = nullptr;
+
+  if (curr->message->getID() == ID) {
+    prev->next = curr->next;
+
+    if (curr == tail) {
+      tail = prev;
+    }
 
     delete curr->message;
     delete curr;
     deleted = true;
+  } else {
+    prev = curr;
+    curr = curr->next;
   }
+}
+}*/
 
-  while (!deleted) {
-    Node *prev = nullptr;
+messageList::~messageList() {
+  Node *curr = head;
+  Node *prev = nullptr;
 
-    if (curr->message->getID() == ID) {
-      prev->next = curr->next;
+  while (curr != nullptr) {
+    prev = curr;
 
-      if (curr == tail) {
-        tail = prev;
-      }
+    curr = curr->next;
 
-      delete curr->message;
-      delete curr;
-      deleted = true;
-    } else {
-      prev = curr;
-      curr = curr->next;
-    }
+    delete prev->message;
+    delete prev;
   }
 }
