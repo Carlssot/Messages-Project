@@ -1,16 +1,5 @@
-Receive  Itzel Trudeau 1
-Receive  Dimitri Bourque 2
-Receive  Jasmine Montemayor 3
-Receive  Titus Poston 4
-Receive  Ulises Greiner 5
-Receive  Leslie Christian 6
-Receive  Howard Folse 7
-Receive  Micah Pilcher 8
-Receive  Ella Barela 9
-Receive  Kenley Easton 10
 Messages for Titus Poston:
   4
-Receive  Jasper Mccaskill 11
 ** All Messages **
 Message 3 Jasmine Montemayor
 Message 4 Titus Poston
@@ -50,12 +39,8 @@ Messages for Leslie Christian:
   6
 Messages for Jasmine Montemayor:
   3
-Receive  Genesis Candelaria 12
-Receive  Howard Folse 13
-Receive  Fernanda Roberge 14
 Messages for Micah Pilcher:
   8
-Receive  Danica Moten 15
 Messages for Jasmine Montemayor:
   3
 ** All Messages **
@@ -73,23 +58,16 @@ Message 13 Howard Folse
 Message 14 Fernanda Roberge
 Message 15 Danica Moten
 **********************
-Receive  Gemma Kelley 16
 Messages for Ella Barela:
   9
 Messages for Genesis Candelaria:
   12
 Messages for Jasmine Montemayor:
   3
-Receive  Helen Hargrove 17
 Messages for Gemma Kelley:
   16
 Messages for Genesis Candelaria:
   12
-Receive  Mariam Laws 18
-Receive  Lucian Waite 19
-Receive  Jonathan Jay 20
-Receive  Lilia Blackmon 21
-Receive  Taylor Wren 22
 ** All Messages **
 Message 3 Jasmine Montemayor
 Message 4 Titus Poston
@@ -112,10 +90,8 @@ Message 20 Jonathan Jay
 Message 21 Lilia Blackmon
 Message 22 Taylor Wren
 **********************
-Receive  Sean Carrasco 23
 Messages for Leslie Christian:
   6
-Receive  Lucas Park 24
 Messages for Jasper Mccaskill:
   11
 Messages for Taylor Wren:
@@ -148,13 +124,10 @@ Message 22 Taylor Wren
 Message 23 Sean Carrasco
 Message 24 Lucas Park
 **********************
-Receive  Darwin Sargent 25
 Messages for Sean Carrasco:
   23
 Messages for Jasper Mccaskill:
   11
-Receive  Adyson Pichardo 26
-Receive  Lylah Hoskins 27
 ** All Messages **
 Message 3 Jasmine Montemayor
 Message 4 Titus Poston
@@ -213,8 +186,6 @@ Messages for Ella Barela:
   9
 Messages for Jonathan Jay:
   20
-Receive  James Mccrary 28
-Receive  Courtney Neal 29
 ** All Messages **
 Message 3 Jasmine Montemayor
 Message 4 Titus Poston
@@ -246,7 +217,6 @@ Message 29 Courtney Neal
 **********************
 Messages for Micah Pilcher:
   8
-Receive  Kelly Castle 30
 Messages for Darwin Sargent:
   25
 ** All Messages **
@@ -309,11 +279,8 @@ Message 28 James Mccrary
 Message 29 Courtney Neal
 Message 30 Kelly Castle
 **********************
-Receive  Kristina Hilliard 31
 Messages for Adyson Pichardo:
   26
-Receive  Santino Bisson 32
-Receive  Destiny Vann 33
 Messages for Micah Pilcher:
   8
 Messages for Lucian Waite:
@@ -322,11 +289,8 @@ Messages for Micah Pilcher:
   8
 Messages for Micah Pilcher:
   8
-Receive  Alex Arthur 34
 Messages for Jasper Mccaskill:
   11
-Receive  Ulises Greiner 35
-Receive  Gerardo Blackman 36
 ** All Messages **
 Message 3 Jasmine Montemayor
 Message 4 Titus Poston
@@ -365,10 +329,6 @@ Message 36 Gerardo Blackman
 **********************
 Messages for Sean Carrasco:
   23
-Receive  Genesis Candelaria 37
-Receive  Valentina Tobias 38
-Receive  Amani Willis 39
-Receive  Brayan Provost 40
 ** All Messages **
 Message 3 Jasmine Montemayor
 Message 4 Titus Poston
@@ -409,7 +369,6 @@ Message 38 Valentina Tobias
 Message 39 Amani Willis
 Message 40 Brayan Provost
 **********************
-Receive  Jace Markham 41
 Messages for Kristina Hilliard:
   31
 ** All Messages **

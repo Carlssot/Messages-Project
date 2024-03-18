@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
       file.getline(name, STRMAX);
       // file.ignore(5,'\n');
 
-      cout << action << " " << name << " " << ID << endl;
+      // cout << action << " " << name << " " << ID << endl;
       list.addMessage(ID, name);
 
       // cout << action << " " << name << " " << ID << endl;
