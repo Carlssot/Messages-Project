@@ -1,9 +1,8 @@
 # Messages-Project
 
-This projects creates a linked list of Messages objects, the message objest includes a name for the person and a ID for the message.
-It will read the actions, names and IDs from a txt file.
+This project creates a linked list of Message objects, the message object includes a name for the person and an ID for that message. It will read the actions, names and IDs from a txt file.
+If the action is “Receive” a new message object will be added to the linked list.
+If the action is “Delete” an ID will be input and the message with that ID will be deleted.
+If the action is “List” and a name, all the messages for that person will be outputted.
+If the action is “All” all the messages in the linked list will be outputted.
 
-If the action is to "Recieve", a new message object will be added to the list with name and ID in that line.
-If the action is "Delete", an ID will aslo be read and the message object with that especific ID will be deleted.
-If the action is "List" and a name, all the message IDs for that person will be output.      
-If the action is "ALL" and the message objects will be outptut.
