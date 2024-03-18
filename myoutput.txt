@@ -11,8 +11,6 @@ Receive  Kenley Easton 10
 Messages for Titus Poston:
   4
 Receive  Jasper Mccaskill 11
-1
-2
 ** All Messages **
 Message 3 Jasmine Montemayor
 Message 4 Titus Poston
@@ -412,7 +410,6 @@ Message 39 Amani Willis
 Message 40 Brayan Provost
 **********************
 Receive  Jace Markham 41
-3
 Messages for Kristina Hilliard:
   31
 ** All Messages **

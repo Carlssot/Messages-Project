@@ -4,7 +4,6 @@
 
 #include "messageList.h"
 #include "message.h"
-#include <iomanip>
 #include <iostream>
 
 using namespace std;
@@ -71,8 +70,10 @@ void messageList::deleteMessage(int ID) {
       delete curr->message;
       delete curr;
       deleted = true;
+      
+      // Test right ID
+      // cout << ID << endl;
 
-        cout << ID << endl;
     } else {
       while (curr != nullptr && curr->message->getID() != ID) {
         prev = curr;
@@ -84,52 +85,12 @@ void messageList::deleteMessage(int ID) {
         delete curr->message;
         delete curr;
 
-        cout << ID << endl;
+        // cout << ID << endl;
 
-        deleted = true;
       }
     }
   }
-
-  // if (deleted == false) {
-  // cout << "ID not found in list." << endl;
-  // }
 }
-
-/*bool deleted = false;
-Node *curr = head;
-
-if (head == nullptr) {
-  deleted = true;
-  tail = nullptr;
-} else if (head->message->getID() == ID) {
-  curr = head;
-  head = head->next;
-
-  delete curr->message;
-  delete curr;
-  deleted = true;
-}
-
-while (!deleted) {
-  Node *prev = nullptr;
-
-  if (curr->message->getID() == ID) {
-    prev->next = curr->next;
-
-    if (curr == tail) {
-      tail = prev;
-    }
-
-    delete curr->message;
-    delete curr;
-    deleted = true;
-  } else {
-    prev = curr;
-    curr = curr->next;
-  }
-}
-}*/
 
 messageList::~messageList() {
   Node *curr = head;
