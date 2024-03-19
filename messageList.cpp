@@ -40,7 +40,7 @@ void messageList::listAll() const {
     curr = curr->next;
   }
 
-  cout << "**********************" << endl;
+  cout << "******************" << endl;
 }
 
 void messageList::listRecipient(const char *name) const {
@@ -59,18 +59,29 @@ void messageList::listRecipient(const char *name) const {
 void messageList::deleteMessage(int ID) {
   Node *curr = head;
   Node *prev = nullptr;
-  bool deleted = false;
 
-  if (head == nullptr) {
-    deleted = true;
+  if (curr == nullptr) {
+    // list is empty
+    tail = nullptr;
+    head = nullptr;
+
   } else {
+
     if (head->message->getID() == ID) {
+
+      // check if head is tail
+
       curr = head;
-      head = head->next;
+
+      head = curr->next;
+
+      if (head == nullptr) {
+        tail = nullptr;
+      }
+
       delete curr->message;
       delete curr;
-      deleted = true;
-      
+
       // Test right ID
       // cout << ID << endl;
 
@@ -80,13 +91,20 @@ void messageList::deleteMessage(int ID) {
         curr = curr->next;
       }
 
-      if (prev != nullptr && prev->message->getID() == ID) {
+      // found ID if not nullptr
+      if (curr != nullptr) {
+
+        // check if curr = tail before deleting
+        if (curr == tail) {
+          if (prev != nullptr) {
+            tail = prev;
+          }
+        }
+
         prev->next = curr->next;
+
         delete curr->message;
         delete curr;
-
-        // cout << ID << endl;
-
       }
     }
   }
