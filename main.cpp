@@ -42,9 +42,9 @@ int main(int argc, char *argv[]) {
     } else if (strcmp("Delete", action) == 0) {
       file >> ID;
       file.ignore();
-      
-      //test input:
-      // cout << action << " "  << ID << endl;
+
+      // test input:
+      //  cout << action << " "  << ID << endl;
 
       list.deleteMessage(ID);
     } else if (strcmp("List", action) == 0) {

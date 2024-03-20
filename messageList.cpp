@@ -46,9 +46,9 @@ void messageList::listAll() const {
 void messageList::listRecipient(const char *name) const {
   Node *curr = head;
 
+  cout << "Messages for" << name << ":" << endl;
   while (curr != nullptr) {
     if (strcmp(name, curr->message->getRecipient()) == 0) {
-      cout << "Messages for" << curr->message->getRecipient() << ":" << endl;
       cout << "  " << curr->message->getID() << endl;
     }
 
