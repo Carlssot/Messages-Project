@@ -82,9 +82,6 @@ void messageList::deleteMessage(int ID) {
       delete curr->message;
       delete curr;
 
-      // Test right ID
-      // cout << ID << endl;
-
     } else {
       while (curr != nullptr && curr->message->getID() != ID) {
         prev = curr;
